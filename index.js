@@ -72,10 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
-
+console.log(multiply(5, 4))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -88,9 +88,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  let ageInDogYears = (age * 7);
+  return ageInDogYears;
 }
+console.log(dogYears(31));
 
 
 
@@ -121,10 +123,8 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
-
+function hungryDog(dogWeight, dogAge){}
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -149,11 +149,41 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computerChoice = Math.round(Math.random() * 3);
+const userChoice = 'rock'
 function game(user, computer){
-  /*add your code here*/
-}
+  if (computerChoice === 0){
+    computer = 'rock';
+  }else if (computerChoice === 1){
+    computer = 'paper';
+  }else if (computerChoice === 2){
+    computer = 'scissors';
+  }
+  
+  console.log('The computer chose ' + computer);
+  console.log('The player chose ' + user);
 
+  if (userChoice === 'rock' && computerChoice === 'rock'){
+    console.log('The game was a tie!');
+  }else if (userChoice === 'rock' && computerChoice === 'paper'){
+    console.log('The computer won!');
+  }else if(userChoice === 'rock' && computerChoice === 'scissors'){
+    console.log('The player won!');
+  }else if (userChoice === 'paper' && computerChoice === 'rock'){
+    console.log('The player won!');
+  }else if (userChoice === 'paper' && computerChoice === 'paper'){
+    console.log('The game was a tie!');
+  }else if (userChoice === 'paper' && computerChoice === 'scissors'){
+    console.log('The computer won!');
+  }else if (userChoice === 'scissors' && computerChoice === 'rock'){
+    console.log('The computer won!');
+  }else if (userChoice === 'scissors' && computerChoice === 'paper'){
+    console.log('The player won!');
+  }else if (userChoice === 'scissors' && computerChoice === 'scissors'){
+    console.log('The game was a tie!');
+  }
+};
+console.log(game(userChoice, computerChoice));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
